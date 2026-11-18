@@ -6,8 +6,8 @@ body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn,dt,dd,blockqu
 
 /* Own images only */
 .hero.ld-hero{position:relative;height:auto;min-height:82vh;background:linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.52)),url("../Assets/images/leadership.jpg") center/cover no-repeat #14233f}
-.ceo{background:linear-gradient(121deg,rgba(0,0,0,.9),rgba(0,0,0,.7) 57%,rgba(0,0,0,.5)),url("../Assets/images/leadership/quote.jpg") center/cover no-repeat #0e1a30}
-.contact{background:linear-gradient(121deg,rgba(0,0,0,.92),rgba(0,0,0,.75)),url("../Assets/images/leadership/contact.jpg") center/cover no-repeat #0e1a30}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/Multiple-Volvo-A50.png") center/cover no-repeat #0e1a30}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/become-supplier1.png") center/cover no-repeat #0e1a30}
 .pic{background:#ddd}
 .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.42))}
