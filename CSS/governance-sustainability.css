@@ -1,0 +1,111 @@
+/* Samancor Chrome – Governance (ESG pillar) page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn,th,td{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.gs-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url("../Assets/images/governance.jpg") center/cover no-repeat #14233f}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.9),rgba(0,0,0,.7) 57%,rgba(0,0,0,.5)),url("../Assets/images/governance-esg/quote.jpg") center/cover no-repeat #0e1a30}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/our-esg-approach.jpg") center/cover no-repeat #0e1a30}
+
+.gs-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(90px,19vw,300px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.gs-hero .wrap{position:relative;z-index:2}
+
+.gs-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.gs-intro p.lead{font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#000;margin-bottom:18px}
+.gs-intro p{max-width:560px}
+
+/* Coverage table */
+.gs-matrix-sec{background:var(--alt)}
+.gs-matrix-wrap{overflow-x:auto;margin-top:48px}
+.gs-matrix{width:100%;min-width:680px;border-collapse:collapse;text-align:left;background:#fff}
+.gs-matrix th,.gs-matrix td{padding:20px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+.gs-matrix thead th{border-top:2px solid var(--yellow);border-bottom:1px solid var(--ink);font-weight:400;font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);padding-top:24px}
+.gs-matrix tbody th{font-weight:700;font-size:17px;color:var(--navy);width:30%}
+.gs-matrix td{color:#555}
+.gs-matrix td a{color:var(--navy);border-bottom:1px solid var(--yellow)}
+.gs-matrix tbody tr:last-child th,.gs-matrix tbody tr:last-child td{border-bottom:0}
+.gs-matrix tbody tr:hover th,.gs-matrix tbody tr:hover td{background:var(--alt)}
+.gs-note{margin-top:16px;color:var(--muted);font-size:13px}
+
+/* Principles band */
+.gs-rules{background:var(--navy);color:#fff}
+.gs-rules h2{color:#fff}
+.gs-rules .tag{color:#cfd8e6}
+.gs-rl{display:grid;grid-template-columns:repeat(3,1fr);margin-top:56px;border-top:1px solid #1f3a6b}
+.gs-r{padding:32px 32px 8px 0}
+.gs-r+.gs-r{padding-left:32px;border-left:1px solid #1f3a6b}
+.gs-r::before{content:"";display:block;width:6px;height:6px;background:var(--yellow);margin-bottom:20px}
+.gs-r h3{color:#fff;font-size:24px;font-weight:700;letter-spacing:-.3px;margin-bottom:10px}
+.gs-r p{color:#cfd8e6;font-size:15px;max-width:320px}
+
+/* Questions accordion */
+.gs-dil .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.gs-sticky{position:sticky;top:100px}
+.gs-sticky p{margin-top:20px;max-width:380px}
+.gs-acc{display:grid;gap:8px}
+.gs-acc details{background:var(--alt);padding:0 24px}
+.gs-acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-size:18px;color:var(--navy);font-weight:700}
+.gs-acc summary::-webkit-details-marker{display:none}
+.gs-acc summary::after{content:"+";font-size:22px;line-height:1}
+.gs-acc details[open] summary::after{content:"×"}
+.gs-acc details[open]{box-shadow:inset 2px 0 0 var(--yellow)}
+.gs-acc .a{padding:0 0 24px;max-width:560px}
+.gs-acc .a .mono{color:var(--muted);display:block;margin-bottom:6px}
+.gs-acc .a p{font-size:15px}
+.gs-acc .a a{color:var(--navy);border-bottom:1px solid var(--yellow)}
+
+/* At a glance */
+.gs-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:56px}
+.gs-stats .stat{border-left:2px solid var(--line);padding-left:20px}
+.gs-stats .stat b{display:block;font-weight:700;font-size:clamp(36px,4vw,56px);line-height:1.1;letter-spacing:-1.12px;color:var(--navy)}
+.gs-stats .stat .mono{color:var(--muted)}
+
+/* Openness tiles */
+.gs-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px}
+.gs-tile{background:var(--alt);padding:28px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.gs-tile::before{content:"";width:6px;height:6px;background:var(--yellow)}
+.gs-tile h3{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:8px;transition:color .3s}
+.gs-tile p{font-size:15px;line-height:1.5;transition:color .3s}
+.gs-tile a{display:inline-block;margin-top:14px;border-bottom:1px solid var(--yellow);color:var(--navy);font-size:15px;transition:color .3s}
+.gs-tile:hover{background:var(--navy)}
+.gs-tile:hover h3,.gs-tile:hover a{color:#fff}.gs-tile:hover p{color:#cfd8e6}
+
+/* Documents */
+.gs-docs{margin-top:40px;border-top:1px solid var(--ink)}
+.gs-doc{display:grid;grid-template-columns:1fr 120px 120px;gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.gs-doc:hover{background:var(--alt);padding-left:16px;padding-right:16px;box-shadow:inset 2px 0 0 var(--yellow)}
+.gs-doc h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.gs-doc p{font-size:14px;line-height:1.5;max-width:560px}
+.gs-doc .tagx{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:3px 8px;background:#fff;justify-self:start}
+.gs-doc .btn{width:100%}
+
+/* Contact + related */
+.cbox{background:#fff;color:#000;padding:32px;display:grid}
+.cbox>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.cbox>div:first-child{padding-top:0}
+.cbox .mono{color:var(--muted);display:block;margin-bottom:4px}
+.cbox span.v{color:#000;font-size:17px}
+.cbox .btn{margin-top:20px}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:900px){
+.hero.gs-hero{min-height:88vh}
+.gs-intro .wrap,.gs-dil .wrap{grid-template-columns:1fr;gap:32px}
+.gs-sticky{position:static}
+.gs-rl{grid-template-columns:1fr}
+.gs-r,.gs-r+.gs-r{padding:28px 0;border-left:0}
+.gs-r+.gs-r{border-top:1px solid #1f3a6b}
+.gs-stats{grid-template-columns:1fr 1fr}
+.gs-tiles,.related{grid-template-columns:1fr}
+.gs-doc{grid-template-columns:1fr auto;gap:16px}
+.gs-doc>div:first-child{grid-column:1/-1}
+.gs-doc .btn{width:auto;min-width:120px}
+}
+@media(prefers-reduced-motion:reduce){.gs-tile,.gs-doc,.related a{transition:none}}

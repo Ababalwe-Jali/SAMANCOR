@@ -1,0 +1,103 @@
+/* Samancor Chrome – Employment Equity page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.ee-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("../Assets/images/employment.jpg") center/cover no-repeat #14233f}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.9),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/CTA3.png") center/cover no-repeat #0e1a30}
+
+.ee-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(80px,17vw,280px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.ee-hero .wrap{position:relative;z-index:2}
+
+.ee-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.ee-intro p.lead{font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#000;margin-bottom:18px}
+.ee-intro p{max-width:560px}
+
+/* Journey */
+.ee-flow-sec{background:var(--alt)}
+.ee-flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;border-top:2px solid var(--yellow)}
+.ee-stage{background:#fff;padding:24px 22px 28px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-right:1px solid var(--line);transition:background .3s}
+.ee-stage:last-child{border-right:0}
+.ee-stage .mono{color:var(--muted);transition:color .3s}
+.ee-stage h3{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:-.3px;margin:8px 0 10px;transition:color .3s}
+.ee-stage p{font-size:14px;line-height:1.55;transition:color .3s}
+.ee-stage::after{content:"→";position:absolute;right:-9px;top:20px;width:18px;height:18px;background:var(--yellow);color:#000;font-size:11px;line-height:18px;text-align:center;z-index:2}
+.ee-stage:last-child::after{display:none}
+.ee-stage:hover{background:var(--navy)}
+.ee-stage:hover h3{color:#fff}.ee-stage:hover .mono,.ee-stage:hover p{color:#cfd8e6}
+
+/* Principles */
+.ee-prin .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.ee-sticky{position:sticky;top:100px}
+.ee-sticky p{margin-top:20px;max-width:380px}
+.ee-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ee-pr{background:var(--alt);padding:24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.ee-pr::before{content:"";width:6px;height:6px;background:var(--yellow)}
+.ee-pr h3{font-size:21px;font-weight:700;color:var(--navy);margin-bottom:8px;transition:color .3s}
+.ee-pr p{font-size:15px;line-height:1.5;transition:color .3s}
+.ee-pr:hover{background:var(--navy)}
+.ee-pr:hover h3{color:#fff}.ee-pr:hover p{color:#cfd8e6}
+
+/* Accountability band */
+.ee-track{background:var(--navy);color:#fff}
+.ee-track h2{color:#fff}
+.ee-track .tag{color:#cfd8e6}
+.ee-track .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.ee-track p{color:#cfd8e6;margin-top:20px;max-width:440px}
+.ee-track ul{list-style:none;padding:0;border-top:1px solid #1f3a6b}
+.ee-track li{padding:18px 0 18px 22px;border-bottom:1px solid #1f3a6b;position:relative;color:#e6ecf5;font-size:15px}
+.ee-track li::before{content:"";position:absolute;left:0;top:27px;width:6px;height:6px;background:var(--yellow)}
+
+/* Documents */
+.ee-docs{margin-top:40px;border-top:1px solid var(--ink)}
+.ee-doc{display:grid;grid-template-columns:1fr 120px 120px;gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.ee-doc:hover{background:var(--alt);padding-left:16px;padding-right:16px;box-shadow:inset 2px 0 0 var(--yellow)}
+.ee-doc h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.ee-doc p{font-size:14px;line-height:1.5;max-width:560px}
+.ee-doc .tagx{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:3px 8px;background:#fff;justify-self:start}
+.ee-doc .btn{width:100%}
+.ee-doc .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+.ee-faq-sec{background:var(--alt)}
+.ee-faq-sec .faq details{background:#fff}
+
+/* Commitment band + related */
+.ee-ask .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center}
+.ee-ask .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.ee-ask .side a.l{border-bottom:1px solid var(--yellow);font-size:17px}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:1100px){
+.ee-flow{grid-template-columns:repeat(3,1fr)}
+.ee-stage:nth-child(3){border-right:0}
+.ee-stage:nth-child(3)::after{display:none}
+.ee-stage:nth-child(n+4){border-top:1px solid var(--line)}
+}
+@media(max-width:900px){
+.hero.ee-hero{min-height:88vh}
+.ee-intro .wrap,.ee-prin .wrap,.ee-track .wrap,.ee-ask .wrap{grid-template-columns:1fr;gap:32px}
+.ee-sticky{position:static}
+.ee-flow{grid-template-columns:1fr 1fr}
+.ee-stage:nth-child(n){border-right:1px solid var(--line);border-top:0}
+.ee-stage:nth-child(2n){border-right:0}
+.ee-stage:nth-child(n+3){border-top:1px solid var(--line)}
+.ee-stage::after{display:none}
+.ee-stage{min-height:220px}
+.related{grid-template-columns:1fr}
+.ee-doc{grid-template-columns:1fr auto;gap:16px}
+.ee-doc>div:first-child{grid-column:1/-1}
+.ee-doc .btn{width:auto;min-width:120px}
+}
+@media(max-width:600px){
+.ee-flow,.ee-grid{grid-template-columns:1fr}
+.ee-stage:nth-child(n){border-right:0;border-top:1px solid var(--line)}
+.ee-stage:first-child{border-top:0}
+}
+@media(prefers-reduced-motion:reduce){.ee-stage,.ee-pr,.ee-doc,.related a{transition:none}}

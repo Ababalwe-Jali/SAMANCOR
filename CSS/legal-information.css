@@ -1,0 +1,83 @@
+/* Samancor Chrome – Legal Information page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.lg-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/legal.png") center/cover no-repeat #14233f}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/get-in-touch.jpg") center/cover no-repeat #0e1a30}
+
+.lg-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(90px,20vw,320px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.lg-hero .wrap{position:relative;z-index:2}
+
+/* Key points */
+.lg-points{background:var(--alt);border-bottom:1px solid var(--line)}
+.lg-points .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:40px;padding-bottom:40px}
+.lg-points .pt{border-left:2px solid var(--yellow);padding-left:20px}
+.lg-points .mono{color:var(--muted);display:block;margin-bottom:6px}
+.lg-points p{color:var(--ink);font-size:15px;line-height:1.5}
+
+/* Document library */
+.lg-lib-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.lg-filters{display:flex;gap:8px;flex-wrap:wrap}
+.lg-filters button{font-size:12px;letter-spacing:.6px;text-transform:uppercase;padding:10px 16px;background:var(--alt);color:var(--muted);border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s}
+.lg-filters button:hover{color:var(--ink)}
+.lg-filters button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.lg-count{margin-top:32px;color:var(--muted)}
+.lg-docs{margin-top:12px;border-top:1px solid var(--ink)}
+.lg-doc{display:grid;grid-template-columns:1fr 140px 120px;gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.lg-doc[hidden]{display:none}
+.lg-doc:hover{background:var(--alt);padding-left:16px;padding-right:16px;box-shadow:inset 2px 0 0 var(--yellow)}
+.lg-doc h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.lg-doc p{font-size:14px;line-height:1.5;max-width:560px}
+.lg-doc .meta{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.lg-doc .meta span{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:3px 8px;background:#fff}
+.lg-doc .btn{width:100%}
+.lg-doc .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+/* Understanding the documents */
+.lg-notice-sec{background:var(--alt)}
+.lg-notice-sec .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.lg-sticky{position:sticky;top:100px}
+.lg-sticky p{margin-top:20px;max-width:380px}
+.lg-acc{display:grid;gap:8px}
+.lg-acc details{background:#fff;padding:0 24px}
+.lg-acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-size:19px;font-weight:700;color:var(--navy)}
+.lg-acc summary::-webkit-details-marker{display:none}
+.lg-acc summary::after{content:"+";font-size:22px;line-height:1}
+.lg-acc details[open] summary::after{content:"×"}
+.lg-acc details[open]{box-shadow:inset 2px 0 0 var(--yellow)}
+.lg-acc p{padding:0 0 24px;max-width:560px;font-size:15px}
+
+/* Company details */
+.lg-co{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.lg-dl{border-top:1px solid var(--ink)}
+.lg-dl div{display:grid;grid-template-columns:180px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.lg-dl .k{color:var(--muted)}
+
+/* Enquiries band */
+.lg-ask .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center}
+.lg-ask .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.lg-ask .side .mono{color:#ccc}
+
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:900px){
+.hero.lg-hero{min-height:88vh}
+.lg-points .wrap{grid-template-columns:1fr;gap:24px}
+.lg-notice-sec .wrap,.lg-co,.lg-ask .wrap{grid-template-columns:1fr;gap:32px}
+.lg-sticky{position:static}
+.lg-doc{grid-template-columns:1fr auto;gap:16px}
+.lg-doc>div:first-child{grid-column:1/-1}
+.lg-doc .meta{flex-direction:row;align-items:center}
+.lg-doc .btn{width:auto;min-width:120px}
+.related{grid-template-columns:1fr}
+}
+@media(max-width:600px){.lg-dl div{grid-template-columns:1fr;gap:4px}}
+@media(prefers-reduced-motion:reduce){.lg-doc,.related a,.lg-filters button{transition:none}}

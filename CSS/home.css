@@ -1,0 +1,70 @@
+/* Samancor Chrome – Home page. Loads AFTER style.css. Scoped additions only. */
+
+.hero .side{max-width:360px}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap}
+
+/* Value chain */
+.vc ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(6,1fr);margin-top:48px;border-top:2px solid var(--yellow)}
+.vc li{padding:24px 20px 8px 0}
+.vc li+li{padding-left:20px;border-left:1px solid var(--line)}
+.vc li .mono{color:var(--muted);display:block;margin-bottom:10px}
+.vc li h3{font-size:19px;color:var(--navy);margin-bottom:6px}
+.vc li p{font-size:14px;line-height:1.55}
+
+/* Operations tiles */
+.logos.ops{grid-template-columns:repeat(4,1fr)}
+.logos.ops a{background:var(--alt);min-height:130px;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:6px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:18px;color:var(--navy);transition:background .3s,color .3s}
+.logos.ops a small{font-family:'Arial',sans-serif;font-weight:400;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);transition:color .3s}
+.logos.ops a:hover{background:var(--navy);color:#fff}
+.logos.ops a:hover small{color:#cfd8e6}
+
+/* Values carousel */
+.t b{display:block;font-family:Arial,Helvetica,sans-serif;font-size:21px;line-height:1.2;margin-bottom:10px}
+.t q{font-size:15px;color:#e6e6e6;quotes:none}
+
+/* Strategy horizons */
+.hz{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px}
+.hz article{background:var(--alt);padding:28px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;border-top:2px solid var(--yellow);transition:background .3s}
+.hz .mono{color:var(--muted);font-family:'Arial',sans-serif;transition:color .3s}
+.hz h3{font-size:24px;color:var(--navy);margin:8px 0 10px;transition:color .3s}
+.hz article:hover{background:var(--navy)}
+.hz article:hover h3{color:#fff}
+.hz article:hover .mono,.hz article:hover p{color:#cfd8e6}
+
+/* Publications */
+.post p{font-size:14px;margin-top:8px}
+
+/* Audience pathways */
+.paths{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:48px;text-align:left}
+.paths a{background:var(--alt);padding:24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.paths .mono{color:var(--muted);font-family:'Arial',sans-serif;transition:color .3s}
+.paths h3{font-size:20px;font-weight:400;color:var(--navy);margin-bottom:6px;transition:color .3s}
+.paths p{font-size:13px;line-height:1.5;transition:color .3s}
+.paths a:hover{background:var(--navy)}
+.paths a:hover h3{color:#fff}
+.paths a:hover .mono,.paths a:hover p{color:#cfd8e6}
+
+/* Contact form additions */
+.form select{font:inherit;font-size:14px;border:0;border-bottom:2px solid var(--line);padding:8px 0;background:transparent;color:#000;width:100%;border-radius:0}
+.form select:focus{border-color:#000;outline:none}
+.form .note{font-size:13px;color:var(--muted)}
+.contact .chips a{border:1px solid #555;font-family:'Arial',sans-serif;color:#ccc;padding:4px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.contact .chips a:hover{background:#fff;color:var(--navy)}
+
+@media(max-width:1000px){
+.vc ol{grid-template-columns:repeat(3,1fr)}
+.vc li:nth-child(4){padding-left:0;border-left:0}
+.vc li:nth-child(n+4){border-top:1px solid var(--line);margin-top:16px}
+.paths{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:900px){
+.logos.ops{grid-template-columns:repeat(2,1fr)}
+.hz{grid-template-columns:1fr}
+.hz article{min-height:220px}
+}
+@media(max-width:600px){
+.vc ol,.paths{grid-template-columns:1fr}
+.vc li,.vc li+li{padding:20px 0 8px;border-left:0}
+.vc li:nth-child(n+2){border-top:1px solid var(--line);margin-top:0}
+}
+@media(prefers-reduced-motion:reduce){.hz article,.paths a,.logos.ops a{transition:none}}

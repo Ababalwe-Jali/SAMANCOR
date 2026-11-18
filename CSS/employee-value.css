@@ -1,0 +1,112 @@
+/* Samancor Chrome – Employee Value Proposition page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.ev-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/employee.jpg") center/cover no-repeat #14233f}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/CTA5.png") center/cover no-repeat #0e1a30}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.92),rgba(0,0,0,.75)),url("../Assets/images/employee-value/contact.jpg") center/cover no-repeat #0e1a30}
+
+.ev-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(90px,19vw,300px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.ev-hero .wrap{position:relative;z-index:2}
+
+.ev-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.ev-intro p.lead{font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#000;margin-bottom:18px}
+.ev-intro p{max-width:560px}
+
+/* The exchange */
+.ev-swap{display:grid;grid-template-columns:1fr 1fr;margin-top:56px}
+.ev-side{padding:40px}
+.ev-give{background:var(--navy);color:#fff}
+.ev-ask{background:var(--alt)}
+.ev-side .mono{display:block;margin-bottom:12px}
+.ev-give .mono{color:#cfd8e6}
+.ev-ask .mono{color:var(--muted)}
+.ev-side h3{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.6px;margin-bottom:28px;color:var(--navy)}
+.ev-give h3{color:#fff}
+.ev-side ul{list-style:none;padding:0}
+.ev-side li{padding:16px 0 16px 24px;position:relative;font-size:15px}
+.ev-give li{border-top:1px solid #1f3a6b;color:#e6ecf5}
+.ev-ask li{border-top:1px solid var(--line);color:#555}
+.ev-side li::before{content:"";position:absolute;left:0;top:25px;width:6px;height:6px;background:var(--yellow)}
+
+/* Pillars */
+.ev-pill-sec{background:var(--alt)}
+.ev-pills{margin-top:48px;border-top:1px solid var(--ink)}
+.ev-pills details{border-bottom:1px solid var(--line);background:transparent;transition:background .3s}
+.ev-pills details[open]{background:#fff;box-shadow:inset 2px 0 0 var(--yellow)}
+.ev-pills summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:72px 1fr auto;gap:24px;align-items:center;padding:28px 24px 28px 0;font-weight:700;font-size:clamp(22px,2.8vw,36px);letter-spacing:-.6px;color:var(--navy)}
+.ev-pills summary::-webkit-details-marker{display:none}
+.ev-pills summary .n{font-size:12px;font-weight:400;letter-spacing:.6px;color:var(--muted);padding-left:16px}
+.ev-pills summary::after{content:"+";font-size:28px;line-height:1;font-weight:400}
+.ev-pills details[open] summary::after{content:"×"}
+.ev-pills summary:hover{background:rgba(0,0,0,.02)}
+.ev-pillbody{display:grid;grid-template-columns:72px 1fr 1fr;gap:24px;padding:0 24px 32px 0}
+.ev-pillbody p{grid-column:2;max-width:480px}
+.ev-pillbody .chips{grid-column:3;align-content:flex-start}
+.ev-pillbody .chips span{background:var(--alt)}
+
+/* Areas of work */
+.ev-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:56px}
+.ev-path{background:var(--alt);padding:28px}
+.ev-path .mono{color:var(--muted)}
+.ev-path h3{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:-.3px;margin:8px 0 24px}
+.ev-ladder{position:relative;padding-left:28px;margin:0}
+.ev-ladder::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--ink)}
+.ev-ladder li{list-style:none;position:relative;padding:0 0 22px}
+.ev-ladder li:last-child{padding-bottom:0}
+.ev-ladder li::before{content:"";position:absolute;left:-28px;top:6px;width:11px;height:11px;background:#fff;border:2px solid var(--ink)}
+.ev-ladder li:last-child::before{background:var(--yellow);border-color:var(--yellow)}
+.ev-ladder b{display:block;font-weight:700;color:var(--navy)}
+.ev-ladder small{color:var(--muted);font-size:13px}
+.ev-note{margin-top:16px;color:var(--muted);font-size:13px}
+
+/* Promises */
+.ev-prom{background:var(--navy);color:#fff}
+.ev-prom h2{color:#fff}
+.ev-prom .tag{color:#cfd8e6}
+.ev-pr{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid #1f3a6b}
+.ev-p{padding:28px 24px 8px 0}
+.ev-p+.ev-p{padding-left:24px;border-left:1px solid #1f3a6b}
+.ev-p::before{content:"";display:block;width:6px;height:6px;background:var(--yellow);margin-bottom:18px}
+.ev-p h3{color:#fff;font-size:21px;font-weight:700;margin-bottom:8px}
+.ev-p p{color:#cfd8e6;font-size:14px;line-height:1.5}
+
+/* Join */
+.ev-join .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;align-items:center}
+.ev-join p{margin-top:20px;max-width:460px}
+.ev-join .side{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.ev-join .l{border-bottom:1px solid var(--yellow);font-size:17px;color:#fff}
+.ev-join .fraud{font-size:13px;color:#cfd8e6;max-width:320px}
+
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:1000px){
+.ev-pr{grid-template-columns:1fr 1fr}
+.ev-p:nth-child(3){padding-left:0;border-left:0}
+.ev-p:nth-child(n+3){border-top:1px solid #1f3a6b;margin-top:24px;padding-top:28px}
+.ev-paths{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+.hero.ev-hero{min-height:88vh}
+.ev-intro .wrap,.ev-join .wrap{grid-template-columns:1fr;gap:32px}
+.ev-swap{grid-template-columns:1fr}
+.ev-side{padding:28px 24px}
+.ev-pills summary{grid-template-columns:44px 1fr auto;gap:12px}
+.ev-pillbody{grid-template-columns:44px 1fr}
+.ev-pillbody p,.ev-pillbody .chips{grid-column:2}
+.related{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.ev-pr{grid-template-columns:1fr}
+.ev-p:nth-child(n){padding:24px 0 4px;border-left:0;margin-top:0;border-top:1px solid #1f3a6b}
+.ev-p:first-child{border-top:0}
+}
+@media(prefers-reduced-motion:reduce){.ev-pills details,.related a{transition:none}}

@@ -1,0 +1,108 @@
+/* Samancor Chrome – Sales Information page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own <img>; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn,th,td{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.sl-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url("../Assets/images/sales.jpg") center/cover no-repeat #14233f}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/charge-chrome.png") center/cover no-repeat #0e1a30}
+.pic{background:#ddd}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pic::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.42))}
+.pic span{position:absolute;z-index:1;bottom:12px;left:14px;font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#fff;opacity:.85}
+
+.sl-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(110px,24vw,380px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.sl-hero .wrap{position:relative;z-index:2}
+
+/* Sales desk bar */
+.sl-desk{background:var(--navy);color:#fff}
+.sl-desk .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.sl-desk .cell{padding:28px 24px 28px 0;border-top:1px solid #1f3a6b}
+.sl-desk .cell+.cell{padding-left:24px;border-left:1px solid #1f3a6b}
+.sl-desk .mono{color:#cfd8e6;display:block;margin-bottom:6px}
+.sl-desk .v{color:#fff;font-size:17px;line-height:1.4}
+
+/* Intro */
+.sl-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.sl-intro p.lead{font-size:clamp(20px,2.2vw,26px);line-height:1.4;color:#000;margin-bottom:18px}
+.sl-intro p{max-width:560px}
+
+/* Products comparison table */
+.sl-cmp-sec{background:var(--alt)}
+.sl-cmp-wrap{overflow-x:auto;margin-top:48px}
+.sl-cmp{width:100%;min-width:720px;border-collapse:collapse;text-align:left;background:#fff}
+.sl-cmp th,.sl-cmp td{padding:22px 24px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+.sl-cmp thead th{padding-top:28px;border-bottom:1px solid var(--ink);border-top:2px solid var(--yellow);font-weight:700;font-size:22px;letter-spacing:-.3px;color:var(--navy)}
+.sl-cmp thead th small{display:block;margin-top:6px;font-weight:400;font-size:14px;letter-spacing:0;color:var(--muted)}
+.sl-cmp tbody th{font-weight:400;font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);width:160px}
+.sl-cmp td{color:#555}
+.sl-cmp tbody tr:last-child th,.sl-cmp tbody tr:last-child td{border-bottom:0}
+.sl-cmp tbody tr:hover td,.sl-cmp tbody tr:hover th{background:var(--alt)}
+.sl-note{margin-top:16px;color:var(--muted);font-size:13px}
+
+/* Range rail */
+.sl-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.sl-rail{display:flex;gap:16px;overflow-x:auto;padding:0 32px 8px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.sl-rail::-webkit-scrollbar{display:none}
+.sl-card{flex:0 0 min(360px,80vw);scroll-snap-align:start;background:var(--alt);display:flex;flex-direction:column}
+.sl-card .img{height:260px}
+.sl-card .txt{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.sl-card h3{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:-.3px}
+.sl-card p{font-size:15px;line-height:1.5}
+.sl-card .chips{margin-top:auto}
+.sl-card .chips span{background:#fff}
+.sl-card .go{margin-top:8px;align-self:flex-start;border-bottom:1px solid var(--yellow);font-size:15px;color:var(--navy)}
+.sl-card .go:hover{border-bottom-color:var(--navy)}
+
+/* Enquiry checklist */
+.sl-terms{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border:1px solid var(--line)}
+.sl-term{padding:28px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);position:relative;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.sl-term:nth-child(3n){border-right:0}
+.sl-term:nth-last-child(-n+3){border-bottom:0}
+.sl-term::before{content:"";position:absolute;left:-1px;top:28px;width:2px;height:16px;background:var(--yellow)}
+.sl-term .mono{color:var(--muted);transition:color .3s}
+.sl-term h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:6px;transition:color .3s}
+.sl-term p{font-size:14px;line-height:1.5;transition:color .3s}
+.sl-term:hover{background:var(--navy)}
+.sl-term:hover h3{color:#fff}.sl-term:hover .mono,.sl-term:hover p{color:#cfd8e6}
+
+.sl-faq-sec{background:var(--alt)}
+.sl-faq-sec .faq details{background:#fff}
+
+/* Enquiry form */
+.contact .form{align-self:start}
+.form select,.form input[type=date]{font:inherit;font-size:14px;border:0;border-bottom:2px solid var(--line);padding:8px 0;background:transparent;color:#000;width:100%;border-radius:0}
+.form select:focus,.form input[type=date]:focus{border-color:#000;outline:none}
+.contact .chips span{border:1px solid #555;color:#ccc}
+
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:1000px){
+.sl-desk .wrap{grid-template-columns:1fr 1fr}
+.sl-desk .cell:nth-child(odd){padding-left:0;border-left:0}
+.sl-desk .cell:nth-child(even){padding-left:24px}
+.sl-terms{grid-template-columns:1fr 1fr}
+.sl-term:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sl-term:nth-child(2n){border-right:0}
+.sl-term:nth-last-child(-n+2){border-bottom:0}
+}
+@media(max-width:900px){
+.hero.sl-hero{min-height:88vh}
+.sl-intro .wrap{grid-template-columns:1fr;gap:32px}
+.sl-rail{padding-left:20px;padding-right:20px}
+.related{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.sl-desk .wrap,.sl-terms{grid-template-columns:1fr}
+.sl-desk .cell:nth-child(n){padding-left:0;border-left:0}
+.sl-term:nth-child(n){border-right:0;border-bottom:1px solid var(--line)}
+.sl-term:last-child{border-bottom:0}
+.sl-head{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.sl-term,.related a{transition:none}}

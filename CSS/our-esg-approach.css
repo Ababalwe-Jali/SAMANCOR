@@ -1,0 +1,103 @@
+/* Samancor Chrome – Our ESG Approach page. Loads AFTER style.css.
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.eg-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("../Assets/images/our-esg-approach.jpg") center/cover no-repeat #14233f}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.9),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/CTA2.png") center/cover no-repeat #0e1a30}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/CTA.jpg") center/cover no-repeat #0e1a30}
+
+.eg-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(120px,26vw,420px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.eg-hero .wrap{position:relative;z-index:2}
+
+.eg-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.eg-intro p.lead{font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#000;margin-bottom:18px}
+.eg-intro p{max-width:560px}
+
+/* Pillars */
+.eg-pillars{display:flex;gap:8px;margin-top:56px;height:560px}
+.eg-p{flex:1 1 0;min-width:0;background:var(--alt);padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;transition:flex .5s cubic-bezier(.2,.7,.2,1),background .35s}
+.eg-p::before{content:"";position:absolute;left:0;top:28px;width:2px;height:16px;background:var(--yellow)}
+.eg-p .l{font-weight:700;font-size:clamp(120px,14vw,220px);line-height:.8;color:transparent;-webkit-text-stroke:1px var(--navy);letter-spacing:-4px;transition:-webkit-text-stroke-color .35s}
+.eg-p .mono{color:var(--muted);transition:color .35s}
+.eg-p h3{font-size:26px;font-weight:700;color:var(--navy);letter-spacing:-.4px;margin:8px 0 10px;transition:color .35s}
+.eg-p p{font-size:15px;line-height:1.5;max-width:380px;transition:color .35s}
+.eg-p .go{display:inline-block;margin-top:18px;border-bottom:1px solid var(--yellow);color:var(--navy);font-size:15px;transition:color .35s}
+.eg-p:hover,.eg-p:focus-within{flex:1.9 1 0;background:var(--navy)}
+.eg-p:hover .l,.eg-p:focus-within .l{-webkit-text-stroke-color:var(--yellow)}
+.eg-p:hover h3,.eg-p:focus-within h3,.eg-p:hover .go,.eg-p:focus-within .go{color:#fff}
+.eg-p:hover .mono,.eg-p:hover p,.eg-p:focus-within .mono,.eg-p:focus-within p{color:#cfd8e6}
+
+/* Values that guide the approach */
+.eg-commit-sec{background:var(--alt)}
+.eg-commit-sec .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.eg-sticky{position:sticky;top:100px}
+.eg-sticky p{margin-top:20px;max-width:380px}
+.eg-rows{border-top:1px solid var(--ink)}
+.eg-row{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:22px 0 22px 22px;border-bottom:1px solid var(--line);position:relative}
+.eg-row::before{content:"";position:absolute;left:0;top:32px;width:6px;height:6px;background:var(--yellow)}
+.eg-row h3{font-size:19px;font-weight:700;color:var(--navy)}
+.eg-row p{font-size:15px;max-width:460px}
+
+/* Explore links */
+.eg-links{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:48px}
+.eg-link{background:var(--alt);padding:28px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.eg-link .mono{color:var(--muted);transition:color .3s}
+.eg-link h3{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:-.3px;margin-bottom:6px;transition:color .3s}
+.eg-link p{font-size:15px;max-width:420px;transition:color .3s}
+.eg-link i{font-style:normal;color:var(--navy);font-size:22px;align-self:flex-end;margin-top:12px;transition:transform .3s,color .3s}
+.eg-link:hover{background:var(--navy)}
+.eg-link:hover h3,.eg-link:hover i{color:#fff}.eg-link:hover .mono,.eg-link:hover p{color:#cfd8e6}
+.eg-link:hover i{transform:translateX(6px)}
+
+/* Access to information band */
+.eg-rep{background:var(--navy);color:#fff}
+.eg-rep h2{color:#fff}
+.eg-rep .tag{color:#cfd8e6}
+.eg-rep .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.eg-rep p{color:#cfd8e6;margin-top:20px;max-width:440px}
+.eg-rep ul{list-style:none;padding:0;border-top:1px solid #1f3a6b}
+.eg-rep li{padding:18px 0 18px 22px;border-bottom:1px solid #1f3a6b;position:relative;color:#e6ecf5;font-size:15px}
+.eg-rep li::before{content:"";position:absolute;left:0;top:27px;width:6px;height:6px;background:var(--yellow)}
+
+/* Documents */
+.eg-docs{margin-top:40px;border-top:1px solid var(--ink)}
+.eg-doc{display:grid;grid-template-columns:1fr 120px 120px;gap:24px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.eg-doc:hover{background:var(--alt);padding-left:16px;padding-right:16px;box-shadow:inset 2px 0 0 var(--yellow)}
+.eg-doc h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.eg-doc p{font-size:14px;line-height:1.5;max-width:560px}
+.eg-doc .tagx{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:3px 8px;background:#fff;justify-self:start}
+.eg-doc .btn{width:100%}
+.eg-note{margin-top:16px;color:var(--muted);font-size:13px}
+
+/* Contact + related */
+.cbox{background:#fff;color:#000;padding:32px;display:grid}
+.cbox>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.cbox>div:first-child{padding-top:0}
+.cbox .mono{color:var(--muted);display:block;margin-bottom:4px}
+.cbox span.v{color:#000;font-size:17px}
+.cbox .btn{margin-top:20px}
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:900px){
+.hero.eg-hero{min-height:88vh}
+.eg-intro .wrap,.eg-commit-sec .wrap,.eg-rep .wrap{grid-template-columns:1fr;gap:32px}
+.eg-pillars{flex-direction:column;height:auto}
+.eg-p{flex:none;min-height:340px;gap:40px}
+.eg-p:hover,.eg-p:focus-within{flex:none}
+.eg-p .l{font-size:140px}
+.eg-sticky{position:static}
+.eg-row{grid-template-columns:1fr;gap:6px}
+.eg-links,.related{grid-template-columns:1fr}
+.eg-doc{grid-template-columns:1fr auto;gap:16px}
+.eg-doc>div:first-child{grid-column:1/-1}
+.eg-doc .btn{width:auto;min-width:120px}
+}
+@media(prefers-reduced-motion:reduce){.eg-p,.eg-p *,.eg-link,.eg-link i,.eg-doc,.related a{transition:none}}
