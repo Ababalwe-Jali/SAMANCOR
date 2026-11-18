@@ -6,7 +6,7 @@ body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn,th,td{font-fa
 
 /* Own images only */
 .hero.gs-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url("../Assets/images/governance.jpg") center/cover no-repeat #14233f}
-.ceo{background:linear-gradient(121deg,rgba(0,0,0,.9),rgba(0,0,0,.7) 57%,rgba(0,0,0,.5)),url("../Assets/images/governance-esg/quote.jpg") center/cover no-repeat #0e1a30}
+.ceo{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55) 57%,rgba(0,0,0,.55)),url("../Assets/images/become-supplier1.png") center/cover no-repeat #0e1a30}
 .contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/our-esg-approach.jpg") center/cover no-repeat #0e1a30}
 
 .gs-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(90px,19vw,300px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
