@@ -125,3 +125,169 @@ body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:A
 }
 @media(max-width:600px){.op-tabs,.op-fac{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.op-node .card-op,.related a,.op-tabs button,.op-fac article{transition:none}}
+
+/* ==========================================
+   HEAVY HAUL TRUCK SHOWCASE
+========================================== */
+
+.truck-showcase {
+  position: relative;
+  isolation: isolate;
+  padding: 110px 0 100px;
+  background: #fff;
+  overflow: visible;
+}
+
+.truck-showcase__wrap {
+  width: min(100% - 48px, 1440px);
+  margin-inline: auto;
+}
+
+.truck-showcase__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 0px 0 55px;
+}
+
+.truck-showcase__heading h2 {
+  max-width: 720px;
+  font-size: 32px;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  color: var(--navy);
+  margin: 0;
+}
+
+.truck-showcase__heading p {
+  max-width: 340px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.truck-showcase__stage {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: visible;
+}
+
+.truck-showcase__image {
+  position: relative;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+
+  transform: scale(.94);
+  transform-origin: center center;
+
+  transition:
+    width 950ms cubic-bezier(.22, 1, .36, 1),
+    margin-left 950ms cubic-bezier(.22, 1, .36, 1),
+    transform 950ms cubic-bezier(.22, 1, .36, 1),
+    border-radius 700ms ease,
+    box-shadow 700ms ease;
+
+  will-change: width, transform;
+}
+
+.truck-showcase__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2048 / 640;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* Expanded foreground state */
+
+.truck-showcase.is-active .truck-showcase__image {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+
+  transform: scale(1);
+  border-radius: 0;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .10);
+}
+
+/* Supporting information */
+
+.truck-showcase__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .truck-showcase {
+    padding: 80px 0;
+  }
+
+  .truck-showcase__heading {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .truck-showcase__heading p {
+    margin-top: 18px;
+  }
+
+  .truck-showcase__image {
+    width: 100%;
+    transform: scale(1);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .truck-showcase__wrap {
+    width: calc(100% - 32px);
+  }
+
+  .truck-showcase__heading h2 {
+    font-size: 38px;
+  }
+
+  .truck-showcase__image {
+    width: 100%;
+  }
+
+  .truck-showcase.is-active .truck-showcase__image {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .truck-showcase__footer {
+    flex-direction: column;
+    font-size: 10px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .truck-showcase__image {
+    transition: none;
+    transform: none;
+  }
+
+  .truck-showcase.is-active .truck-showcase__image {
+    transform: none;
+  }
+}

@@ -88,6 +88,39 @@
   </div>
 </section>
 
+
+<!-- HEAVY HAUL TRANSPORTATION -->
+<section class="truck-showcase" id="heavy-haul" aria-labelledby="truck-title">
+  <div class="truck-showcase__wrap">
+
+    <div class="tag mono">Mining operations / Heavy equipment</div>
+
+    <div class="truck-showcase__heading">
+      <h2 id="truck-title">Powering the Movement <br>Behind Chrome Mining.</h2>
+      <p>
+        Heavy-duty equipment and transport keep mining operations moving efficiently.
+      </p>
+    </div>
+
+    <div class="truck-showcase__stage">
+
+      <figure class="truck-showcase__image">
+        <img
+          src="./Assets/images/volvo-a50-hauler.png"
+          alt="Volvo A50 articulated hauler secured on a lowbed trailer behind a Volvo FH 440 abnormal-load truck"
+          width="2048"
+          height="640"
+          loading="lazy"
+          decoding="async"
+        >
+      </figure>
+
+    </div>
+
+  </div>
+</section>
+
+
 <section class="pad reveal" id="operations" style="padding-top:0">
   <div class="wrap center">
     <div class="tag mono">Our operations</div>
@@ -160,7 +193,7 @@
       <article class="card">
         <div class="img business-image">
           <!-- Add the products image at this path. -->
-          <img src="./Assets/images/charge-chrome.png" alt="Chrome ore and ferrochrome products" loading="lazy">
+          <img src="./Assets/images/chrome-products.jpg" alt="Chrome ore and ferrochrome products" loading="lazy">
         </div>
         <div class="info">
           <div class="mono" style="color:var(--muted)">Our business / 04</div>
@@ -487,6 +520,35 @@
   });
 
 })();
+
+
+  // Heavy haul truck foreground animation
+  var truckSection = document.getElementById('heavy-haul');
+
+  if (truckSection && 'IntersectionObserver' in window) {
+
+    var truckObserver = new IntersectionObserver(
+      function(entries) {
+
+        entries.forEach(function(entry) {
+
+          if (entry.isIntersecting) {
+            truckSection.classList.add('is-active');
+          } else {
+            truckSection.classList.remove('is-active');
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.25,
+        rootMargin: '-10% 0px -10% 0px'
+      }
+    );
+
+    truckObserver.observe(truckSection);
+  }
 </script>
 
 </body>
