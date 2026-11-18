@@ -6,7 +6,7 @@ body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn,legend{font-f
 
 /* Own images only */
 .hero.bs-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/become-supplier.png") center/cover no-repeat #14233f}
-.contact{background:linear-gradient(121deg,rgba(0,0,0,.92),rgba(0,0,0,.75)),url("../Assets/images/become-supplier/contact.jpg") center/cover no-repeat #0e1a30}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/CTA5.png") center/cover no-repeat #0e1a30}
 
 .bs-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(90px,20vw,320px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
 .bs-hero .wrap{position:relative;z-index:2}
