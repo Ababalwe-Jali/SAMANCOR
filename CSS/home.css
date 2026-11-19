@@ -235,3 +235,62 @@
     transform: none;
   }
 }
+
+/* ===== TOP UTILITY STRIP =====
+   Append to the END of CSS/style.css.
+   The strip is sticky at the very top; the navbar now sticks directly beneath it. */
+
+:root{--strip-h:36px}
+
+.top-strip{
+  position:sticky;top:0;z-index:102;
+  height:var(--strip-h);
+  background:#002256;color:#fff;
+  font-family:Arial,sans-serif;font-size:12px;line-height:1;letter-spacing:.01rem;
+}
+.top-strip__inner{
+  max-width:1440px;height:100%;margin:0 auto;padding:0 32px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.top-strip__address{
+  display:inline-flex;align-items:center;gap:8px;min-width:0;
+  color:#fff;text-decoration:none;
+}
+.top-strip__address span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top-strip__address:hover span{text-decoration:underline;text-underline-offset:3px}
+.top-strip__pin{flex:0 0 14px;width:14px;height:14px;fill:#fff}
+.top-strip__social{display:flex;align-items:center;gap:6px;flex:0 0 auto}
+.top-strip__icon{
+  width:28px;height:28px;display:grid;place-items:center;border-radius:50%;
+  color:#fff;transition:background .2s,color .2s;
+}
+.top-strip__icon svg{width:15px;height:15px;fill:currentColor}
+.top-strip__icon:hover{background:#fff;color:#002256}
+.top-strip a:focus-visible{outline:2px solid #f2b705;outline-offset:2px}
+
+/* The navbar now sticks below the strip, and anchor jumps clear both bars */
+nav#nav{top:var(--strip-h)}
+html{scroll-padding-top:calc(80px + var(--strip-h))}
+
+@media(max-width:600px){
+  :root{--strip-h:34px}
+  .top-strip{font-size:11px}
+  .top-strip__inner{padding:0 16px;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){.top-strip__icon{transition:none}}
+
+/* ---- OPTIONAL: keep sticky cards and side panels clear of the extra 36px ----
+   The shared sticky cards in style.css start at 96–196px. Uncomment to shift them. */
+/*
+.card:nth-child(1){top:calc(96px + var(--strip-h))}
+.card:nth-child(2){top:calc(116px + var(--strip-h))}
+.card:nth-child(3){top:calc(136px + var(--strip-h))}
+.card:nth-child(4){top:calc(156px + var(--strip-h))}
+.card:nth-child(5){top:calc(176px + var(--strip-h))}
+.card:nth-child(6){top:calc(196px + var(--strip-h))}
+.step:nth-child(1){top:calc(96px + var(--strip-h))}
+.step:nth-child(2){top:calc(116px + var(--strip-h))}
+.step:nth-child(3){top:calc(136px + var(--strip-h))}
+.step:nth-child(4){top:calc(156px + var(--strip-h))}
+.how .left{top:calc(112px + var(--strip-h))}
+*/

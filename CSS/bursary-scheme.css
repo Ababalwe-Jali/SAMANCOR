@@ -1,0 +1,106 @@
+/* Samancor Chrome – Bursary Scheme page. Loads AFTER style.css.
+   (File name kept as bursary-sheme.css to match the existing project.)
+   Fonts: Arial, sans-serif only. Images: every slot uses its own file; nothing is shared. */
+
+:root{--head:Arial,sans-serif;--text:Arial,sans-serif;--mono:Arial,sans-serif}
+body,button,input,select,textarea,p,h1,h2,h3,h4,summary,.mono,.btn{font-family:Arial,sans-serif}
+
+/* Own images only */
+.hero.bu-hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url("../Assets/images/CTA3.png") center/cover no-repeat #14233f}
+.contact{background:linear-gradient(121deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url("../Assets/images/CTA7.png") center/cover no-repeat #0e1a30}
+
+.bu-hero .ghost{position:absolute;right:-1vw;top:14vh;z-index:1;font-weight:700;font-size:clamp(80px,17vw,280px);line-height:.9;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.18);pointer-events:none;user-select:none;white-space:nowrap}
+.bu-hero .wrap{position:relative;z-index:2}
+
+.bu-intro .wrap{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.bu-intro p.lead{font-size:clamp(20px,2.2vw,28px);line-height:1.4;color:#000;margin-bottom:18px}
+.bu-intro p{max-width:560px}
+
+/* Scheme details */
+.bu-detail-sec{background:var(--alt)}
+.bu-detail{display:grid;grid-template-columns:360px 1fr;gap:64px;margin-top:48px;align-items:start}
+.bu-apply{position:sticky;top:100px;background:var(--navy);color:#fff;padding:32px}
+.bu-apply .mono{color:#cfd8e6;display:block;margin-bottom:12px}
+.bu-apply h3{color:#fff;font-size:26px;font-weight:700;letter-spacing:-.3px;margin-bottom:12px}
+.bu-apply p{color:#cfd8e6;font-size:15px;margin-bottom:24px}
+.bu-apply .btn{background:#fff;color:var(--navy);border-color:#fff;width:100%}
+.bu-apply .btn:hover{background:var(--navy);color:#fff}
+.bu-apply .btn[aria-disabled="true"]{opacity:.55;pointer-events:none}
+.bu-apply .l{display:block;margin-top:16px;border-bottom:1px solid var(--yellow);color:#fff;font-size:15px;width:fit-content}
+.bu-blocks{display:grid;gap:8px}
+.bu-block{background:#fff;padding:32px;display:grid;grid-template-columns:200px 1fr;gap:24px}
+.bu-block .mono{color:var(--muted)}
+.bu-block h3{font-size:22px;font-weight:700;color:var(--navy);letter-spacing:-.3px;margin-top:6px}
+.bu-block ul{list-style:none;padding:0;border-top:1px solid var(--ink)}
+.bu-block li{padding:14px 0 14px 22px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+.bu-block li::before{content:"";position:absolute;left:0;top:22px;width:6px;height:6px;background:var(--yellow)}
+.bu-note{margin-top:16px;color:var(--muted);font-size:13px}
+
+/* How to apply */
+.bu-steps{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;border-top:1px solid var(--ink)}
+.bu-step{padding:28px 20px 8px 0}
+.bu-step+.bu-step{padding-left:20px;border-left:1px solid var(--line)}
+.bu-step .num{font-weight:700;font-size:clamp(64px,7vw,104px);line-height:.85;color:transparent;-webkit-text-stroke:1px var(--navy);letter-spacing:-2px;display:block;margin-bottom:20px}
+.bu-step h3{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.bu-step p{font-size:14px;line-height:1.5}
+
+/* Documents band */
+.bu-prep{background:var(--navy);color:#fff}
+.bu-prep h2{color:#fff}
+.bu-prep .tag{color:#cfd8e6}
+.bu-prep .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.bu-prep p{color:#cfd8e6;margin-top:20px;max-width:440px}
+.bu-prep ul{list-style:none;padding:0;border-top:1px solid #1f3a6b}
+.bu-prep li{padding:18px 0 18px 22px;border-bottom:1px solid #1f3a6b;position:relative;color:#e6ecf5;font-size:15px}
+.bu-prep li::before{content:"";position:absolute;left:0;top:27px;width:6px;height:6px;background:var(--yellow)}
+
+.bu-faq-sec{background:var(--alt)}
+.bu-faq-sec .faq details{background:#fff}
+
+/* Register interest form */
+.bu-form{background:#fff;color:#000;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.bu-form label{display:grid;gap:6px;color:var(--ink)}
+.bu-form .full{grid-column:1/-1}
+.bu-form input,.bu-form textarea,.bu-form select{font:inherit;font-size:14px;border:0;border-bottom:2px solid var(--line);padding:8px 0;background:transparent;color:#000;width:100%;border-radius:0}
+.bu-form select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:28px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 4px center}
+.bu-form input:focus,.bu-form textarea:focus,.bu-form select:focus{border-color:#000;outline:none}
+.bu-form input:focus-visible,.bu-form textarea:focus-visible,.bu-form select:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.bu-form .req{color:var(--muted)}
+.bu-check{display:grid!important;grid-template-columns:22px 1fr;gap:12px!important;align-items:start;font-size:14px;color:#555}
+.bu-check input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:2px solid var(--ink);background:#fff;padding:0;margin:0;cursor:pointer;display:grid;place-items:center}
+.bu-check input::after{content:"";width:10px;height:10px;background:var(--yellow);transform:scale(0);transition:transform .15s}
+.bu-check input:checked{background:#000}
+.bu-check input:checked::after{transform:scale(1)}
+.bu-check a{border-bottom:1px solid var(--yellow)}
+.bu-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#ok{color:var(--muted)}
+.contact .bu-side p{margin-top:24px;max-width:440px}
+.contact .bu-side .l{display:inline-block;margin-top:20px;border-bottom:1px solid var(--yellow);color:#fff;font-size:17px}
+
+.related{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:48px;text-align:left}
+.related a{background:var(--alt);padding:28px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s}
+.related a .mono{color:var(--muted);transition:color .3s}
+.related a h3{font-size:22px;font-weight:400;color:var(--navy);transition:color .3s}
+.related a:hover{background:var(--navy)}
+.related a:hover h3{color:#fff}.related a:hover .mono{color:#cfd8e6}
+
+@media(max-width:1100px){
+.bu-steps{grid-template-columns:repeat(3,1fr)}
+.bu-step:nth-child(4){padding-left:0;border-left:0}
+.bu-step:nth-child(n+4){border-top:1px solid var(--line);margin-top:20px;padding-top:28px}
+}
+@media(max-width:900px){
+.hero.bu-hero{min-height:88vh}
+.bu-intro .wrap,.bu-prep .wrap,.bu-detail{grid-template-columns:1fr;gap:32px}
+.bu-apply{position:static}
+.bu-block{grid-template-columns:1fr;padding:24px}
+.bu-form{padding:24px}
+.related{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.bu-steps{grid-template-columns:1fr}
+.bu-step:nth-child(n){padding:24px 0 8px;border-left:0;margin-top:0;border-top:1px solid var(--line)}
+.bu-step:first-child{border-top:0}
+.bu-form{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.related a,.bu-check input::after{transition:none}}
